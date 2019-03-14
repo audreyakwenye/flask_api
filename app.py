@@ -9,7 +9,7 @@ reg = pickle.load(open('reg_model.pkl','rb'))
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world():
+def hello():
     return 'Hello, World!'
 
 @app.route('/api', methods=['POST'])

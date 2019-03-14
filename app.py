@@ -8,6 +8,10 @@ reg = pickle.load(open('reg_model.pkl','rb'))
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
 @app.route('/api', methods=['POST'])
 def make_predict():
     lines = request.get_json(force=True) # was 'data'

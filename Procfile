@@ -1,1 +1,1 @@
-web: gunicorn flaskapi:app
+web: gunicorn flaskapi:APP -t 120 

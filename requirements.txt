@@ -1,0 +1,6 @@
+flask
+pyzillow 
+pandas
+numpy 
+sklearn
+pyzillow

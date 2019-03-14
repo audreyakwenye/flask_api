@@ -9,11 +9,11 @@ from pyzillow.pyzillow import ZillowWrapper, GetDeepSearchResults
 def create_app():
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__)
-    reg = pickle.load(open('/path/to/reg_model.pkl','rb'))
+    reg = pickle.load(open('/flaskapi/reg_model.pkl','rb'))
 
     @app.route('/')
     def hello():
-        return 'Hello, World!'
+        return 'Hello, World! It worked'
 
     @app.route('/api', methods=['POST'])
     def make_predict():

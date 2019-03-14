@@ -1,4 +1,5 @@
 import numpy as np
+import os 
 from flask import Flask, abort, jsonify, request
 import _pickle as pickle
 from pandas.io.json import json_normalize
@@ -8,7 +9,7 @@ from pyzillow.pyzillow import ZillowWrapper, GetDeepSearchResults
 def create_app():
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__)
-    reg = pickle.load(open('/reg_model.pkl','rb'))
+    reg = pickle.load(open('/path/to/reg_model.pkl','rb'))
 
     @app.route('/')
     def hello():
